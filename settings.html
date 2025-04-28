@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Account Settings</h1>
+
+        <div class="settings-section">
+            <h2>Account Actions</h2>
+            <button id="changePasswordBtn" class="settings-btn">Change Password</button>
+            <button id="deleteAccountBtn" class="settings-btn delete-btn">Delete Account</button>
+        </div>
+    </div>
+
+    <div id="changePasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeChangePassword">&times;</span>
+            <h2>Change Password</h2>
+            <input type="password" id="currentPassword" placeholder="Current Password">
+            <input type="password" id="newPassword" placeholder="New Password">
+            <input type="password" id="confirmNewPassword" placeholder="Confirm New Password">
+            <p id="passwordError" class="error-message"></p>
+            <p id="passwordSuccess" class="success-message"></p>
+            <button id="confirmChangePassword">Change Password</button>
+        </div>
+    </div>
+
+    <div id="deleteAccountModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeDeleteAccount">&times;</span>
+            <h2>Delete Account</h2>
+            <p>This action cannot be undone. To confirm, please type <strong>"Delete Account"</strong> below:</p>
+            <input type="text" id="deleteConfirmInput" placeholder="Type here...">
+            <p id="deleteError" class="error-message"></p>
+            <p id="deleteSuccess" class="success-message"></p>
+            <button id="confirmDeleteAccount" disabled>Confirm Deletion</button>
+        </div>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>
