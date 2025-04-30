@@ -1,0 +1,33 @@
+CalTrak is a full‑stack calorie tracking and nutrition management application. Users can register/login, set personalized fitness 
+goals, log foods (via USDA API or manual entry), track daily intake, view progress charts, explore healthy recipes via Spoonacular, 
+and manage account settings
+
+## Requirements:
+Node.js ≥ 14
+npm
+MongoDB Atlas account or local MongoDB
+
+## Installation:
+npm install
+
+MONGO_URI=your-mongodb-uri
+JWT_SECRET=your_jwt_secret   # To create and configure
+
+npm start
+
+## Structure;
+CalTrak/
+├── public/     # Front‐end HTML, CSS, JS files
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   ├── dashboard.html
+│   ├── setgoals.html
+│   ├── calories.html
+│   ├── progress.html
+│   ├── recipes.html
+│   ├── settings.html
+│   └── *.js, *.css
+├── models/     # Mongoose schemas (User, FoodEntry)
+│   ├── user.js
+│   └── FoodEntry.js
